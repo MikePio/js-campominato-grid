@@ -99,6 +99,8 @@ const mainWrapper = document.querySelector('.main-wrapper');
       // generateBoxes.classList.add('clicked');
       //OPPURE
       // generateBoxes.style.backgroundColor = '#355289';
+      // console.log(generateBoxes);
+      generateBoxes.boxid = i;
       console.log(generateBoxes);
   });
 
