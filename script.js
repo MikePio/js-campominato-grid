@@ -21,6 +21,40 @@ Le validazioni e i controlli possiamo farli anche in un secondo momento.
 
 */
 
+const buttonGenerate = document.querySelector('.btn');
+const mainWrapper = document.querySelector('.main-wrapper');
+// const container = document.querySelector('.container');
+
+//per la generazione del container 
+const generateContainer = document.createElement('div');
+
+//per la generazione di delle box
+const generateBoxes = document.createElement('div');
+
+// //generazione del container
+// generateContainer.classList.add('container');
+// mainWrapper.append(generateContainer);
+
+
+// //generazione di una box
+// generateBoxes.classList.add('square');
+// document.querySelector('.container').append(generateBoxes);
+
+buttonGenerate.addEventListener('click', function(){
+  //generazione del container
+  generateContainer.classList.add('container');
+  mainWrapper.append(generateContainer);
+  
+  
+  //generazione di una box
+  generateBoxes.classList.add('square');
+  document.querySelector('.container').append(generateBoxes);
+  
+});
+
+console.log(generateBoxes);
+console.log(buttonGenerate);
+
 
 
 
