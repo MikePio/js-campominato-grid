@@ -1,6 +1,42 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+.main-wrapper{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.container{
+  width: 700px;
+  height: 700px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgb(16, 37, 75);
+  /* background-color: rgb(1, 90, 255); */
+}
 
+.square{
+  aspect-ratio: 1 / 1; /* casella quadrata */
+  /* 100 caselle */
+  width: calc(100% / 10);
+  height: calc(100% / 10);
+  /* 81 caselle */
+  /* width: calc(100% / 9);
+  height: calc(100% / 9); */
+  /* 49 caselle */
+  /* width: calc(100% / 7);
+  height: calc(100% / 7); */
+  border: 2px solid rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
 
 
 
