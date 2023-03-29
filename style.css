@@ -23,6 +23,7 @@ button {
   margin: 0 0 10px 0;
   background-color: #10254b;
   color: white;
+  font-weight: bold;
   border-style: none;
   border-radius: 5px;
   padding: 10px 30px;
@@ -68,7 +69,9 @@ button:hover {
   cursor: pointer;
 }
 
-
+.square.clicked{
+  background-color: #355289;
+}
 
 
 

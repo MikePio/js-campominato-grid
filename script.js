@@ -21,8 +21,15 @@ Le validazioni e i controlli possiamo farli anche in un secondo momento.
 
 */
 
+// const arrayBoxes = [];
+
 const buttonGenerate = document.querySelector('.btn');
 const mainWrapper = document.querySelector('.main-wrapper');
+
+
+
+
+
 
   // //per la generazione del container 
   // const generateContainer = document.createElement('div');
@@ -35,14 +42,39 @@ const mainWrapper = document.querySelector('.main-wrapper');
   //   const generateBoxes = document.createElement('div');
   //   //generazione di una box
   //   generateBoxes.classList.add('square');
+  //   // document.querySelector('.container').append(generateBoxes);
   //   document.querySelector('.container').append(generateBoxes);
+    
+  //   // const boxes = document.querySelector('.square');
+  //   // // console.log(boxes, i);    
+    
+  //   // arrayBoxes.push(boxes);
+  //   // // console.log(arrayBoxes[i], [i]);    
+  //   // const singleBox = arrayBoxes[i];
+  //   // console.log(singleBox);    
+
+  //     generateBoxes.addEventListener('click', function(){
+  //       //* cliccando la prima cambia colore e la seconda ritorna come prima
+  //       generateBoxes.classList.toggle('clicked');
+  //       //OPPURE (NON LA MIGLIORE PERCHè NON è POSSIBILE LEGGERE LE PROPRIETà NEL CONSOLE.LOG)
+  //       // this.classList.toggle('clicked');
+  //       //* cliccando cambia colore per sempre
+  //       // generateBoxes.classList.add('clicked');
+  //       //OPPURE
+  //       // generateBoxes.style.backgroundColor = '#355289';
+  //       console.log(generateBoxes);
+  //   });
+
   // }
 
+  
 
 
-//* button che genera container e box
-buttonGenerate.addEventListener('click', function(){
-  //disabilito il button
+  
+  
+  //* button che genera container e box
+  buttonGenerate.addEventListener('click', function(){
+  // disabilito il button
   buttonGenerate.disabled = true;
 
   //per la generazione del container 
@@ -57,8 +89,21 @@ buttonGenerate.addEventListener('click', function(){
     //generazione di una box
     generateBoxes.classList.add('square');
     document.querySelector('.container').append(generateBoxes);
-  }
 
+    generateBoxes.addEventListener('click', function(){
+      //* cliccando la prima cambia colore e la seconda ritorna come prima
+      generateBoxes.classList.toggle('clicked');
+      //OPPURE (NON LA MIGLIORE PERCHè NON è POSSIBILE LEGGERE LE PROPRIETà NEL CONSOLE.LOG)
+      // this.classList.toggle('clicked');
+      //* cliccando cambia colore per sempre
+      // generateBoxes.classList.add('clicked');
+      //OPPURE
+      // generateBoxes.style.backgroundColor = '#355289';
+      console.log(generateBoxes);
+  });
+
+  }
+  
 });
 
 console.log(buttonGenerate);
