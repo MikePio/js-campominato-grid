@@ -77,18 +77,23 @@ const mainWrapper = document.querySelector('.main-wrapper');
   // disabilito il button
   buttonGenerate.disabled = true;
 
-  //per la generazione del container 
-  const generateContainer = document.createElement('div');
-  //generazione del container
-  generateContainer.classList.add('container');
-  mainWrapper.append(generateContainer);
+  // //per la generazione del container 
+  // const generateContainer = document.createElement('div');
+  // //generazione del container
+  // generateContainer.classList.add('container');
+  // mainWrapper.append(generateContainer);
+  //*OPPURE
+  generaContainer();
   
   for (let i = 0; i < 100; i++){
+
     //per la generazione di delle box
     const generateBoxes = document.createElement('div');
-    //generazione di una box
-    generateBoxes.classList.add('square');
-    document.querySelector('.container').append(generateBoxes);
+    // //generazione di una box
+    // generateBoxes.classList.add('square');
+    // document.querySelector('.container').append(generateBoxes);
+    //*OPPURE
+    generaBox(generateBoxes);
 
     generateBoxes.addEventListener('click', function(){
       //* cliccando la prima cambia colore e la seconda ritorna come prima
@@ -100,6 +105,7 @@ const mainWrapper = document.querySelector('.main-wrapper');
       //OPPURE
       // generateBoxes.style.backgroundColor = '#355289';
       // console.log(generateBoxes);
+      //* CREO UNA PROPRIETà 
       generateBoxes.boxid = i;
       console.log(generateBoxes);
   });
@@ -110,12 +116,21 @@ const mainWrapper = document.querySelector('.main-wrapper');
 
 console.log(buttonGenerate);
 
+// * --------------------------- FUNZIONI ---------------------------------- /
 
+function generaContainer(){
+  //per la generazione del container 
+  const generateContainer = document.createElement('div');
+  //generazione del container
+  generateContainer.classList.add('container');
+  mainWrapper.append(generateContainer);
+}
 
-
-
-
-
+function generaBox(newBoxes){
+  //generazione di una box
+  newBoxes.classList.add('square');
+  document.querySelector('.container').append(newBoxes);
+}
 
 
 
